@@ -36,6 +36,7 @@ ale jak narazie nie znalazlem rozwiązania :( . Oprócz tego po stronie backendu
 trudności wykonania. Front robiłem w Angularze, natomiast backend .NET CORE 2.1. Mam nadzieję, że ma to sens ponieważ pierwszy raz pisałem w .NET Core :)
 
 W związku z problemem połączenia się z bazą danych:
+
 Problem jest taki, że podczas pobierania solucji backendu z GitHuba zmienia się adres localhost. Probowalem na wiele sposobów ustawić go 
 na stałe, ale za każdym razem było to samo(wrzucam na gita dobrze działający front z backendem, a pobieram i front wywala błąd bo odwołuję sie juz do starego adresu z backendu). W celu poprawnego działania należy uruchumić backend w Package-Manager-Console w projekcie Kulinarna-Repository wykonać update-database oraz uruchumić aplikację. Następnie po otwarciu folderu z frontem w terminalu wykonać polecenie (npm i) oraz w pliku src/app/recipes/shared/recipe-service.service.ts zmiennej baseURL przypisać nowy adres backendu. 
 Po tych czynnościach wszystko jest w porządku. Wiem, że nie jest to optymalne rozwiązanie, ale mam nadzieję, że nie przeszkodzi w sprawdzeniu aplikacji. :/ 
