@@ -14,27 +14,16 @@ namespace Kulinarna.API
     {
         public static void Main(string[] args)
         {
-          //  CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args).Build().Run();
 
-
-            var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("hosting.json", optional: true).Build();
-
-            var host = new WebHostBuilder()
-                .UseConfiguration(config)
-                .UseIISIntegration()
-                .UseKestrel()
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseStartup<Startup>()
-                .Build();
-            host.Run();
         }
 
         
 
 
-        //public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-        //    WebHost.CreateDefaultBuilder(args)
-        //        .UseStartup<Startup>();              
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+               .UseStartup<Startup>();              
 
     }
 }
